@@ -1,0 +1,44 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Tabuada"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:SharedContents="using:Tabuada.Views"
+    x:Class="Tabuada.settings"
+    mc:Ignorable="d" Background="White" Foreground="Black" BorderBrush="Black">
+    <Page.BottomAppBar>
+        <CommandBar Background="#FF34B9F7" Opacity="0.95" ClosedDisplayMode="Minimal" RequestedTheme="Dark">
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Name="appBarButtonRateApp" HorizontalAlignment="Stretch" Label="classifique esse aplicativo" VerticalAlignment="Stretch" d:LayoutOverrides="Width, Height" Click="appBarButtonRateApp_Click"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid x:Name="LayoutRoot" Background="White">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="129.167"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,10,0.167" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
+            <TextBlock Text="TABUADA" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0" Foreground="Black"/>
+            <TextBlock Text="configurações" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" Foreground="Black"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid x:Name="ContentRoot" Margin="10,129,10,0" Grid.RowSpan="2">
+            <SharedContents:Settings VerticalAlignment="Top"/>
+            
+        </Grid>
+        <TextBlock x:Name="tb_adErro" HorizontalAlignment="Left" Margin="339,475.833,0,-109" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Visibility="Collapsed"/>
+    </Grid>
+</Page>

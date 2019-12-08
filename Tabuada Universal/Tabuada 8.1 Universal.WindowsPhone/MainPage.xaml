@@ -1,0 +1,128 @@
+﻿<Page
+    x:Class="Tabuada.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Tabuada"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+      
+    xmlns:ShareControlsViews="using:Tabuada.Views"
+    
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Storyboard x:Name="AnimInicio">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="textBlock">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-409.333">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="textBlock_Copy">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-409.333">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="tb_num_tabuar">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-409.333">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="tb_num_ate_onde">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-409.333">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="btnCalc">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-409.333">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Page.Resources>
+    <Page.BottomAppBar>
+        <CommandBar Background="#FF34B9F7" Foreground="White" Opacity="0.97">
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Name="appBarButtonAprender" HorizontalAlignment="Stretch" Label="aprender a tabuada" VerticalAlignment="Stretch" d:LayoutOverrides="Width, Height" Click="appBarButtonAprender_Click"/>
+                <AppBarButton x:Name="appBarButtonSobre" HorizontalAlignment="Stretch" Label="sobre" VerticalAlignment="Stretch" d:LayoutOverrides="Width, Height" Click="appBarButtonSobre_Click"/>
+            </CommandBar.SecondaryCommands>
+            <AppBarButton x:Name="AppBarButtonSettings" Icon="Setting" Label="configurações" Background="Black" Click="AppBarButtonSettings_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid Background="White">
+
+        <Grid x:Name="GridAd" Height="127" VerticalAlignment="Bottom" Background="White" Margin="0,0,0,-60">
+            <TextBlock x:Name="tb_adErro" HorizontalAlignment="Left" Margin="355,54,-1,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Visibility="Collapsed"/>
+        </Grid>
+        <Grid x:Name="GridDados" Margin="0,0,0,72">
+
+            <Grid x:Name="GridCalculos" Margin="0,120,0,0" Height="388" VerticalAlignment="Top">
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="14,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" Width="271" Height="22" FontSize="20" RenderTransformOrigin="0.5,0.5">
+                    <TextBlock.RenderTransform>
+                        <CompositeTransform/>
+                    </TextBlock.RenderTransform>
+        			<Run Text="Tabuada de qual número?"/>
+        			<LineBreak/>
+        			<Run/>
+                </TextBlock>
+                <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="14,96,0,0" TextWrapping="Wrap" Foreground="Black" Width="271" Text="Tabuada até que número?&#xA;" FontSize="20" Height="22" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+                    <TextBlock.RenderTransform>
+                        <CompositeTransform/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+                <TextBox x:Name="tb_num_tabuar" Margin="15,36,15,0" TextWrapping="Wrap" Text="" d:LayoutOverrides="LeftPosition, RightPosition" Height="47" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" InputScope="Number" PlaceholderText="" BorderBrush="Black">
+                    <TextBox.RenderTransform>
+                        <CompositeTransform/>
+                    </TextBox.RenderTransform>
+                </TextBox>
+                <TextBox x:Name="tb_num_ate_onde" Margin="15,123,15,158" TextWrapping="Wrap" Text="" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" RenderTransformOrigin="0.5,0.5" InputScope="Number" PlaceholderText="" BorderBrush="Black" Height="47" VerticalAlignment="Top">
+                    <TextBox.RenderTransform>
+                        <CompositeTransform/>
+                    </TextBox.RenderTransform>
+                </TextBox>
+                <Button x:Name="btnCalc" Content="Calcular" HorizontalAlignment="Center" Margin="81,183,80,0" VerticalAlignment="Top" Background="White" BorderBrush="Black" Foreground="Black" Width="139" Height="73" Click="btnCalc_Click" RenderTransformOrigin="0.5,0.5">
+                    <Button.RenderTransform>
+                        <CompositeTransform/>
+                    </Button.RenderTransform>
+                </Button>
+            </Grid>
+            <ShareControlsViews:Logo Width="Auto" Height="125" VerticalAlignment="Top" />
+        </Grid>
+    </Grid>
+
+</Page>

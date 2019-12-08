@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="Tabuada.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Tabuada"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    
+    xmlns:SharedContents="using:Tabuada.Views"
+    
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.BottomAppBar>
+        <CommandBar Background="#FF34B9F7" Opacity="0.95" RequestedTheme="Dark">
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Name="appBarButtonRateApp" HorizontalAlignment="Stretch" Label="classifique esse aplicativo" VerticalAlignment="Stretch" d:LayoutOverrides="Width, Height" Click="appBarButtonRateApp_Click"/>
+            </CommandBar.SecondaryCommands>
+            <AppBarButton x:Name="AppBarBtnEmail" Label="e-mail" Icon="Mail" Click="AppBarBtnEmail_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid Margin="0,0.333,0,-60.333" RequestedTheme="Light">
+        <SharedContents:About/>
+    </Grid>
+</Page>

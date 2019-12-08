@@ -1,0 +1,122 @@
+﻿<UserControl
+    x:Class="Tabuada.Views.Aprender"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Tabuada.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignWidth="400" RequestedTheme="Light" Height="554.701">
+
+    <Grid>
+        <Hub Header="aprender">
+
+            <HubSection Header="dividindo por 2">
+                <DataTemplate>
+                    <Grid>
+                        <ScrollViewer Margin="0" Grid.ColumnSpan="3" d:LayoutOverrides="LeftPosition, RightPosition">
+                            <TextBlock x:Name="dividindoPor2" TextWrapping="Wrap" Text="Um número é divisível por 2 quando ele é PAR" Foreground="Black" FontSize="22.667"/>
+                        </ScrollViewer>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection Header="dividindo por 3">
+                <DataTemplate>
+                    <Grid>
+                        <ScrollViewer Margin="0" Grid.ColumnSpan="3" d:LayoutOverrides="LeftPosition, RightPosition">
+                            <TextBlock x:Name="dividindoPor3" TextWrapping="Wrap" Foreground="Black" FontSize="22.667">
+                                <Run Text="um número é divisível por 3 quando a soma de todos seus algarismos fo rum múltiplo de 3."/>
+							    <LineBreak/>
+							    <Run/>
+							    <LineBreak/>
+							    <Run Text="Por exemplo: 3258 é divisível por 3."/>
+							    <LineBreak/>
+							    <Run/>
+							    <LineBreak/>
+							    <Run Text="3 + 2 + 5 + 8 = 18. 18 é multiplo de 3, então 3258 também é"/>
+							    <LineBreak/>
+							    <Run/>
+                            </TextBlock>
+                        </ScrollViewer>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection Header="dividindo por 4">
+                <DataTemplate>
+                    <Grid>
+                        <ScrollViewer Margin="0" Grid.ColumnSpan="3" d:LayoutOverrides="LeftPosition, RightPosition">
+                            <TextBlock x:Name="dividindoPor4" TextWrapping="Wrap" Foreground="Black" FontSize="22.667">
+                                <Run Text="Um número será divisívl po 4 quandoseus dois últimos algatismos for um múltiplo de 4."/>
+							    <LineBreak/>
+							    <Run/>
+							    <LineBreak/>
+							    <Run Text="Por exemplo: 25412 este número é divisível por 4 pois seus dois últimos algarismos, 12, formam um número múltiplo de 4(4 x 3 = 12)"/>
+							    <LineBreak/>
+							    <Run/>
+							    <LineBreak/>
+							    <Run Text="Dica: Para ver se o número formado pelos dois algarismos é múltiplo de 4, podemos fazer uma conta rápida. Primeiro, o número deve ser par, e sua metade também deve ser par"/>
+							    <LineBreak/>
+							    <Run/>
+							    <LineBreak/>
+							    <Run Text="Por Exemplo: 23564 é divisível por 4, pegamos o 64 e vemos que é par, sua metade 32 também é par, então 23564 é divisível por 4"/>
+                            </TextBlock>
+                        </ScrollViewer>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection Header="dividindo por 5">
+                <DataTemplate>
+                    <Grid>
+                        <ScrollViewer Margin="0" Grid.ColumnSpan="3" d:LayoutOverrides="LeftPosition, RightPosition">
+                            <TextBlock x:Name="dividindoPor5" TextWrapping="Wrap" Text="Um número é divisível por 5 quando ele termina em 0 ou 5" Foreground="Black" FontSize="22.667"/>
+                        </ScrollViewer>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection Header="dividindo por 6">
+                <DataTemplate>
+                    <Grid>
+                        <ScrollViewer Margin="0" Grid.ColumnSpan="3" d:LayoutOverrides="LeftPosition, RightPosition">
+                            <TextBlock x:Name="dividindoPor2" TextWrapping="Wrap" Text="Um número é divisível por 6 quando ele for divisível por 2 e 3 ao mesmo tempo" Foreground="Black" FontSize="22.667"/>
+                        </ScrollViewer>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection Header="dividindo por 8">
+                <DataTemplate>
+                    <Grid>
+                        <ScrollViewer Margin="0" Grid.ColumnSpan="3" d:LayoutOverrides="LeftPosition, RightPosition">
+                            <TextBlock x:Name="dividindoPor2" TextWrapping="Wrap" Text="Um número é divisível por 8 quando seus últimos três algarismos formarem um número múltiplo de 8" Foreground="Black" FontSize="22.667"/>
+                        </ScrollViewer>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection Header="dividindo por 9">
+                <DataTemplate>
+                    <Grid>
+                        <ScrollViewer Margin="0" Grid.ColumnSpan="3" d:LayoutOverrides="LeftPosition, RightPosition">
+                            <TextBlock x:Name="dividindoPor2" TextWrapping="Wrap" Text="Um número é divisível por 9 quando a soma de seus algarismos resultar em um número múltiplo de 9" Foreground="Black" FontSize="22.667"/>
+                        </ScrollViewer>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection Header="dividindo por 10">
+                <DataTemplate>
+                    <Grid>
+                        <ScrollViewer Margin="0" Grid.ColumnSpan="3" d:LayoutOverrides="LeftPosition, RightPosition">
+                            <TextBlock x:Name="dividindoPor2" TextWrapping="Wrap" Text="Um número é divisível por 10 quando ele termina em 0" Foreground="Black" FontSize="22.667"/>
+                        </ScrollViewer>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+
+        </Hub>
+    </Grid>
+</UserControl>

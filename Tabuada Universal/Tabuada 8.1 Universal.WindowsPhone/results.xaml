@@ -1,0 +1,99 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Tabuada"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Class="Tabuada.results"
+    mc:Ignorable="d" Background="White" Foreground="Black">
+
+    <Page.BottomAppBar>
+        <CommandBar Background="#FF34B9F7" Foreground="White" Opacity="0.95">            
+            <AppBarButton x:Name="AppBarButtonInverter" Icon="Rotate" Label="inverter" Click="AppBarButtonInverter_Click"/>
+            <AppBarButton x:Name="AppBarButtonRead" Icon="Play" Label="Ler" Click="AppBarButtonRead_Click"/>
+            <AppBarButton x:Name="AppBarButtonPause" Icon="Pause" Label="Pausar" Visibility="Collapsed" Click="AppBarButtonPause_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+
+        <Grid Margin="0,0,0,62" x:Name="GridPageResults">
+
+            <Hub Header="resultados" x:Name="ResultsHub" SectionsInViewChanged="ResultsHub_SectionsInViewChanged">
+                <HubSection Header="somando" x:Name="HubSectionSomando" Tag="somando">
+                    <DataTemplate>
+                        <Grid>
+                            <ScrollViewer Margin="0" Grid.ColumnSpan="3" d:LayoutOverrides="LeftPosition, RightPosition">
+                                <TextBlock x:Name="tb_somando" TextWrapping="Wrap" Text="{Binding}" Foreground="Black" FontSize="22.667"/>
+                            </ScrollViewer>
+                        </Grid>
+                    </DataTemplate>
+                </HubSection>
+
+                <HubSection Header="subtraindo" x:Name="HubSectionSubtraindo" Tag="subtraindo">
+                    <DataTemplate>
+                        <Grid>
+                            <ScrollViewer Margin="0" Grid.ColumnSpan="3" d:LayoutOverrides="LeftPosition, RightPosition">
+                                <TextBlock x:Name="tb_subtraindo" TextWrapping="Wrap" Text="{Binding}" Foreground="Black" FontSize="22.667"/>
+                            </ScrollViewer>
+                        </Grid>
+                    </DataTemplate>
+                </HubSection>
+
+                <HubSection Header="multiplicando" x:Name="HubSectionMultiplicando" Tag="multiplicando">
+                    <DataTemplate>
+                        <Grid>
+                            <ScrollViewer Margin="0" d:LayoutOverrides="LeftPosition, RightPosition">
+                                <TextBlock x:Name="tb_multiplicando" TextWrapping="Wrap" Text="{Binding}" Foreground="Black" FontSize="22.667"/>
+                            </ScrollViewer>
+                        </Grid>
+                    </DataTemplate>
+                </HubSection>
+
+                <HubSection Header="dividindo" x:Name="HubSectionDividindo" Tag="dividindo">
+                    <DataTemplate>
+                        <Grid>
+                            <ScrollViewer Margin="0" Grid.ColumnSpan="3" d:LayoutOverrides="LeftPosition, RightPosition">
+                                <TextBlock x:Name="tb_dividindo" TextWrapping="Wrap" Text="{Binding}" Foreground="Black" FontSize="22.667"/>
+                            </ScrollViewer>
+                        </Grid>
+                    </DataTemplate>
+                </HubSection>
+
+                <HubSection Header="resto da divisão" x:Name="HubSectionResto" Tag="resto">
+                    <DataTemplate>
+                        <Grid>
+                            <ScrollViewer Margin="0" Grid.ColumnSpan="3" d:LayoutOverrides="LeftPosition, RightPosition">
+                                <TextBlock x:Name="tb_restodivisao" TextWrapping="Wrap" Text="{Binding}" Foreground="Black" FontSize="22.667"/>
+                            </ScrollViewer>
+                        </Grid>
+                    </DataTemplate>
+                </HubSection>
+
+                <HubSection Header="raiz quadrada" x:Name="HubSectionRaiz" Tag="raiz">
+                    <DataTemplate>
+                        <Grid>
+                            <ScrollViewer Margin="0" Grid.ColumnSpan="3" d:LayoutOverrides="LeftPosition, RightPosition">
+                                <TextBlock x:Name="tb_raiz" TextWrapping="Wrap" Text="{Binding}" Foreground="Black" FontSize="22.667"/>
+                            </ScrollViewer>
+                        </Grid>
+                    </DataTemplate>
+                </HubSection>
+            </Hub>
+
+
+        </Grid>
+
+        <TextBlock x:Name="tb_adErro" HorizontalAlignment="Left" Margin="345,567,0,-1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Visibility="Collapsed"/>
+
+    </Grid>
+</Page>
